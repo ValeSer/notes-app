@@ -17,15 +17,15 @@
     };
 
     function addSuccess(text) {
-        document.getElementById('spec_success').append(
-            `Success: ${text}`
-        );
+        const el = document.createElement('div');
+        el.innerText = `Success: ${text}`;
+        document.getElementById('spec_success').append(el);
     }
 
     function addFailure(text) {
-        document.getElementById('spec_errors').append(
-            `Failed: ${text}`
-        );  
+        const el = document.createElement('div');
+        el.innerText = `Failed: ${text}`;
+        document.getElementById('spec_errors').append(el);  
     }
 
     exports.assert = assert;
